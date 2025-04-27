@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.home {
+  height: 100vh;
+  background-color: #0162be;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  text-transform: capitalize;
+  overflow: hidden;
+}
+
+.contanier {
+  /* 7rem = 7 * 16 = 112 */
+  margin: 0 7rem;
+  height: 100%;
+  padding: 35px 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.home .contanier .logo {
+  width: 50px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.home .contanier ul a {
+  color: white;
+  text-decoration: none;
+  padding: 25px;
+}
+
+.home .content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70%;
+  margin: 35px 0;
+  padding: 0 15px;
+}
+
+.content-text h1 {
+  font-size: 40px;
+  text-transform: uppercase;
+}
+
+.content-text h1 span {
+  font-size: 70px;
+}
+
+.content-text p {
+  line-height: 1.6;
+  font-size: 18px;
+  margin-bottom: 20px;
+  width: 80%;
+}
+
+.content-text .button {
+  text-decoration: none;
+  background-color: white;
+  padding: 15px;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+  color: black;
+  font-weight: 500;
+}
+
+.content-text .button:hover {
+  transition-duration: 0.2s;
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+}
+
+.pepsi-can {
+  width: 150px;
+  animation-name: pepsi-can-ani;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+}
+
+.social {
+  animation-name: pepsi-can-ani;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+}
+
+.home .social a {
+  color: white;
+  padding: 20px;
+  line-height: 30px;
+}
+
+@keyframes pepsi-can-ani {
+  0% {
+    transform: translateX(200px);
+    -webkit-transform: translateX(200px);
+    -moz-transform: translateX(200px);
+    -ms-transform: translateX(200px);
+    -o-transform: translateX(200px);
+  }
+
+  100% {
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+  }
+}
+
+.pepsi-product img {
+  display: block;
+  width: 100px;
+  margin: 20px auto;
+  animation-name: three-product;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+}
+
+@keyframes three-product {
+  0% {
+    transform: translateY(150px);
+    -webkit-transform: translateY(150px);
+    -moz-transform: translateY(150px);
+    -ms-transform: translateY(150px);
+    -o-transform: translateY(150px);
+  }
+
+  100% {
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+  }
+}
+
+@media(max-width: 600px) {
+  nav {
+    display: block;
+  }
+
+  nav .logo {
+    display: block;
+    margin: 0 auto 15px;
+  }
+
+  nav ul a {
+    font-size: 12px;
+  }
+
+  .content {
+    text-align: center;
+  }
+
+  .content-text p {
+    width: 100%;
+  }
+
+  .content-text .button {
+    padding: 10px;
+  }
+
+  .pepsi-can {
+    margin: -18px 0 5px;
+    width: 45px !important;
+  }
+
+  .social {
+    margin-top: -8px;
+  }
+
+  .pepsi-product img {
+    width: 50px;
+    margin-top: 50px;
+  }
+
+}
+
+/* tablet */
+@media(max-width: 900px) {
+  .contanier {
+    /* 1rem = 16px */
+    margin: 0 1rem;
+  }
+
+  nav ul a {
+    padding: 10px;
+  }
+
+  .home .content {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 0 0;
+  }
+
+  .content-text {
+    /* 2rem = 32px */
+    margin-bottom: 2rem;
+  }
+
+  .content-text p {
+    width: 100%;
+  }
+
+  .pepsi-can {
+    width: 80px;
+  }
+
+  .social {
+    margin-top: 10px;
+  }
+
+  .pepsi-product img {
+    width: 70px;
+    margin-top: 60px;
+  }
+}
